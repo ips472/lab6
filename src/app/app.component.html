@@ -9,7 +9,7 @@
 
 <h1>To-do App</h1>
 <input type="text" [(ngModel)]="todoItem" placeholder="Title">
-<input type="text" placeholder="description" [(ngModel)]="todoDescription"><br>
+<input type="text" placeholder="description" [(ngModel)]="TodoDescription"><br>
 
 <button (click)="addToTodoList()">Add to Todo List</button>
 <li *ngFor="let item of listofTodos;

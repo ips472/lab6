@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 interface TodoItem {
-  title: string;
+  title:string;
   description:string;
   date: Date;
 }
@@ -15,9 +15,12 @@ interface TodoItem {
 
 
 export class AppComponent {
-  todoItem: string = '';
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
+  todoItem:string = '';
   
-  listofTodos: TodoItem[]=[];
+  listofTodos:TodoItem[]=[];
   
   addToTodoList= ()=>{
     this.listofTodos.push({title: this.todoItem ,description:this.todoItem ,date: new Date()});
@@ -25,4 +28,5 @@ export class AppComponent {
   deleteItem= (indexofTheItem: number)=>{
     this.listofTodos.splice(indexofTheItem,1);
   }
+TodoDescription: any;
 }
